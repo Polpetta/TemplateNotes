@@ -21,6 +21,11 @@ compile:
 	done; \
 	$(CC) -C $(JOB_NAME); \
 	$(CC) $(CCFLAGS) $(JOB_NAME); \
+	makeindex -s $(OUTPUT_NAME).ist -t $(OUTPUT_NAME).glg -o $(OUTPUT_NAME).gls $(OUTPUT_NAME).glo
+	makeindex -s $(OUTPUT_NAME).ist -t $(OUTPUT_NAME).alg -o $(OUTPUT_NAME).acr $(OUTPUT_NAME).acn
+
+	$(CC) -C $(JOB_NAME); \
+	$(CC) $(CCFLAGS) $(JOB_NAME); \
 
 clean:
 	git clean -Xfd
