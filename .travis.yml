@@ -13,6 +13,8 @@ addons:
     - texlive-fonts-recommended
     - texlive-lang-italian
     - latex-xcolor
+    - pgf
+    - lmodern
 script:
 - make
 before_deploy:
